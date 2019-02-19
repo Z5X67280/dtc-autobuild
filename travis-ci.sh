@@ -20,7 +20,8 @@ git config --global user.name "1"
 git config --global user.email "1"
 curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
 chmod +x repo
-./repo init -u https://github.com/dragon-tc/DragonTC -b master --color=true
+./repo init -h
+./repo init -u https://github.com/dragon-tc/DragonTC -b master
 ./repo sync -j8 -c -f
 cd build
 chmod +x build-dtc
