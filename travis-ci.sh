@@ -16,10 +16,12 @@ function push() {
 			-F chat_id="$TELEGRAM_ID"
 }
 
-sudo apt-get install build-essential git git-svn bc binfmt-support libllvm-3.6-ocaml-dev llvm-3.6 llvm-3.6-dev llvm-3.6-runtime cmake automake autogen autoconf autotools-dev libtool shtool python m4 gcc libtool zlib1g-dev libomp-dev repo
-
-repo init -u https://github.com/dragon-tc/DragonTC -b master
-repo sync -j8 -c -f
+git config --global user.name "1"
+git config --global user.email "1"
+curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
+chmod +x repo
+./repo init -u https://github.com/dragon-tc/DragonTC -b master
+./repo sync -j8 -c -f
 cd build
 chmod +x build-dtc
 ./build-dtc 9.0 opt
